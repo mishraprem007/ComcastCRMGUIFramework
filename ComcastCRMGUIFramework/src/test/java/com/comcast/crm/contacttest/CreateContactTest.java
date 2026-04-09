@@ -24,25 +24,25 @@ public class CreateContactTest extends Baseclass {
 	@Test(groups={"smokeTest","regressionTest"})
 	public void createContactTest() throws Throwable {
 		
-		UtilityClassObject.gettest().log(Status.INFO, "read data from Excel");
+		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file*/
 		String lastName = eLib.getDataFromexcel("contact", 1, 2) + jLib.getRandomNumber();
 
 		/* step2: navigate to contact module*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to contact page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
 		HomePage hp = new HomePage(driver);
 		hp.getContactLink().click();
 
 		/* step3:click on "create contact" button*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to create contact page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to create contact page");
 		ContactsPage cp = new ContactsPage(driver);
 		cp.getcreateNewcontactBtn().click();
 
 		/* step4: enter all the details & create new contact*/
-		UtilityClassObject.gettest().log(Status.INFO,  "Create contact page");
+		UtilityClassObject.getTest().log(Status.INFO,  "Create contact page");
 		CreatingNewContactPage ccp = new CreatingNewContactPage(driver);
 		ccp.createContactpage(lastName); 
-		UtilityClassObject.gettest().log(Status.INFO,  "Contact page Created");
+		UtilityClassObject.getTest().log(Status.INFO,  "Contact page Created");
 		
 		/* verify Header LastName info Expected Result*/
 		ContactInfoPage cip = new ContactInfoPage(driver);
@@ -60,27 +60,27 @@ public class CreateContactTest extends Baseclass {
 	@Test(groups="regressionTest")
 	public void createContactWithOrgTest() throws Throwable {
 
-		UtilityClassObject.gettest().log(Status.INFO, "read data from Excel");
+		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file*/
 		String orgName = eLib.getDataFromexcel("contact", 7, 2) + jLib.getRandomNumber();
 		String shipping = eLib.getDataFromexcel("contact", 7, 3);
 		String lastName = eLib.getDataFromexcel("contact", 7, 4) + jLib.getRandomNumber();
 
 		/* step2: navigate to organization module*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to org page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to org page");
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
 
 		/* step3:click on "create Organization" button*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to create org page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to create org page");
 		OrganizationsPage cnp = new OrganizationsPage(driver);
 		cnp.getCreateNewOrgBtn().click();
 
 		/* step4: enter all the details & create new Organization*/
-		UtilityClassObject.gettest().log(Status.INFO,  "Create org page");
+		UtilityClassObject.getTest().log(Status.INFO,  "Create org page");
 		CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 		cnop.createOrg(orgName, shipping);
-		UtilityClassObject.gettest().log(Status.INFO,  "Org page Created");
+		UtilityClassObject.getTest().log(Status.INFO,  "Org page Created");
 
 		/* verify Header msg Expected Result*/
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
@@ -89,19 +89,19 @@ public class CreateContactTest extends Baseclass {
 		Assert.assertEquals(status, true);
 
 		/* step5: navigate to contact module*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to contact page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
 		hp.getContactLink().click();
 
 		/* step 6:click on "create contact" button*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to create contact page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to create contact page");
 		ContactsPage ccp = new ContactsPage(driver);
 		ccp.getcreateNewcontactBtn().click();
 
 		/* step 7: enter all the details & create new contact*/
-		UtilityClassObject.gettest().log(Status.INFO,  "Create contact pagewithOrg");
+		UtilityClassObject.getTest().log(Status.INFO,  "Create contact pagewithOrg");
 		CreatingNewContactPage cncp = new CreatingNewContactPage(driver);
 		cncp.createContact(lastName);
-		UtilityClassObject.gettest().log(Status.INFO,  "Contact page with Org created");
+		UtilityClassObject.getTest().log(Status.INFO,  "Contact page with Org created");
 
 		/* switch to child window*/
 		wLib.switchToTabOnURL(driver, "module=Accounts");
@@ -132,17 +132,17 @@ public class CreateContactTest extends Baseclass {
 	@Test(groups="regressionTest")
 	public void createContactWithSupportDateTest() throws Throwable {
 
-		UtilityClassObject.gettest().log(Status.INFO, "read data from Excel");
+		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file*/
 		String lastName = eLib.getDataFromexcel("contact", 4, 2) + jLib.getRandomNumber();
 
 		/* step2: navigate to contact module*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to contact page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
 		HomePage hp = new HomePage(driver);
 		hp.getContactLink().click();
 
 		/* step3:click on "create contact" button*/
-		UtilityClassObject.gettest().log(Status.INFO, "Navigate to create contact page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to create contact page");
 		ContactsPage cnp = new ContactsPage(driver);
 		cnp.getcreateNewcontactBtn().click();
 
@@ -150,10 +150,10 @@ public class CreateContactTest extends Baseclass {
 		String endDate = jLib.getRequiredDateYYYYDDMM(30);
 
 		/* step4: enter all the details & create new contact*/
-		UtilityClassObject.gettest().log(Status.INFO,  "Create contact page with supportdate");
+		UtilityClassObject.getTest().log(Status.INFO,  "Create contact page with supportdate");
 		CreatingNewContactPage cncp = new CreatingNewContactPage(driver);
 		cncp.createContact(lastName, startDate, endDate);
-		UtilityClassObject.gettest().log(Status.INFO,  "Contact page with supportdate Created");
+		UtilityClassObject.getTest().log(Status.INFO,  "Contact page with supportdate Created");
 
 		/* verify Header start date info Expected Result*/
 		ContactInfoPage cip = new ContactInfoPage(driver);

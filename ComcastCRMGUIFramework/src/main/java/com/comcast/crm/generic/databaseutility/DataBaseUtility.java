@@ -7,51 +7,57 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.mysql.jdbc.Driver;
+
 public class DataBaseUtility {
-	
+
 	Connection con;
+
 	public void getDbconnection(String url, String username, String password) {
-		
+
 		try {
 			Driver driver = new Driver();
 			DriverManager.registerDriver(driver);
-			 con = DriverManager.getConnection(url, username, password);
-		}catch(Exception e) {
-			
+			con = DriverManager.getConnection(url, username, password);
+		} catch (Exception e) {
+
 		}
 	}
+
 	public void getDbconnection() {
-		
+
 		try {
 			Driver driver = new Driver();
 			DriverManager.registerDriver(driver);
-			 con = DriverManager.getConnection("jdbc:mysql://49.249.28.218:3307/ninza_hrm", "root@%", "root");
-		}catch(Exception e) {
-			
+			con = DriverManager.getConnection("jdbc:mysql://49.249.28.218:3307/ninza_hrm", "root@%", "root");
+		} catch (Exception e) {
+
 		}
 	}
+
 	public void closeDbconnection() throws SQLException {
 		try {
-		con.close();
-		}catch(Exception e) {
-			
+			con.close();
+		} catch (Exception e) {
+
 		}
 	}
-	public ResultSet executeConSelectQuery(String query) throws Throwable {
+
+	public ResultSet executeSelectQuery(String query) throws Throwable {
 		ResultSet result = null;
 		try {
-		Statement stat = con.createStatement();
-		 result = stat.executeQuery(query);
-		}catch(Exception e) {
+			Statement stat = con.createStatement();
+			result = stat.executeQuery(query);
+		} catch (Exception e) {
 		}
-		return result;	
+		return result;
 	}
-	public int executeNonselectQuery(String query) {
+
+	public int executeNonSelectQuery(String query) {
 		int result = 0;
 		try {
-		Statement stat = con.createStatement();
-		 result = stat.executeUpdate(query);
-		}catch(Exception e) {
+			Statement stat = con.createStatement();
+			result = stat.executeUpdate(query);
+		} catch (Exception e) {
 		}
 		return result;
 	}
