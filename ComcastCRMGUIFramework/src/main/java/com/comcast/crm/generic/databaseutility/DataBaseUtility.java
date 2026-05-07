@@ -28,7 +28,7 @@ public class DataBaseUtility {
 		try {
 			Driver driver = new Driver();
 			DriverManager.registerDriver(driver);
-			con = DriverManager.getConnection("jdbc:mysql://49.249.28.218:3307/ninza_hrm", "root@%", "root");
+			con = DriverManager.getConnection("jdbc:mysql://49.249.29.4:3307/ninza_hrm", "root@%", "root");
 		} catch (Exception e) {
 
 		}
