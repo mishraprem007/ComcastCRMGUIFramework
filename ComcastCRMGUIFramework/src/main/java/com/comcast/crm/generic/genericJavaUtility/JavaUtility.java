@@ -1,4 +1,4 @@
-package com.comcast.crm.generic.genericwebdriverutility;
+package com.comcast.crm.generic.genericJavaUtility;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -15,7 +15,7 @@ import org.testng.annotations.BeforeSuite;
 import com.comcast.crm.generic.databaseutility.DataBaseUtility;
 import com.comcast.crm.generic.fileutility.ExcelUtility;
 import com.comcast.crm.generic.fileutility.FileUtility;
-import com.comcast.crm.generic.genericwebdriverutility.JavaUtility;
+import com.comcast.crm.generic.genericJavaUtility.JavaUtility;
 import com.comcast.crm.generic.genericwebdriverutility.UtilityClassObject;
 import com.comcast.crm.generic.genericwebdriverutility.WebDriverUtility;
 import com.comcast.crm.generic.objectrepositoryutility.HomePage;
