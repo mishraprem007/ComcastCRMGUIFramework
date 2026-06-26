@@ -7,25 +7,27 @@ import org.openqa.selenium.support.PageFactory;
 import com.comcast.crm.generic.genericwebdriverutility.WebDriverUtility;
 
 /**
- * @author Priyanka
+ * @author Prem 
  * Contains Login page elements & lib like loginToApp()
  */
-public class LoginPage extends WebDriverUtility{	//Rule1- create a separate java class
+public class LoginPage extends WebDriverUtility { // Rule1- create a separate java class
 
-	WebDriver driver;		// global variable
-	public LoginPage(WebDriver driver) {//constructor //Rule3-object initialization(done in constructor)
-		this.driver=driver;
-	PageFactory.initElements(driver, this);// this current object ref
+	WebDriver driver; // global variable
+
+	public LoginPage(WebDriver driver) {// constructor //Rule3-object initialization(done in constructor)
+		this.driver = driver;
+		PageFactory.initElements(driver, this);// this current object ref
 	}
-	@FindBy(name="user_name")	//Rule2-Object Creation
+
+	@FindBy(name = "user_name") // Rule2-Object Creation
 	private WebElement usernameEdt;
-	
-	@FindBy(name="user_password")
+
+	@FindBy(name = "user_password")
 	private WebElement passwordEdt;
-	
-	@FindBy(id="submitButton")
+
+	@FindBy(id = "submitButton")
 	private WebElement loginBtn;
-	
+
 	// Rule4-object Encapsulation
 	public WebElement getUsernameEdt() {
 		return usernameEdt;
@@ -38,14 +40,16 @@ public class LoginPage extends WebDriverUtility{	//Rule1- create a separate java
 	public WebElement getLoginBtn() {
 		return loginBtn;
 	}
+
 	/**
 	 * login to application based on url, username, password arguments
+	 * 
 	 * @param url
 	 * @param username
 	 * @param password
 	 */
-	//Rule5-Provide Action
-	public void loginToapp(String url, String username , String password) {//business method
+	// Rule5-Provide Action
+	public void loginToapp(String url, String username, String password) {// business method
 		waitForPageToLoad(driver);
 		driver.get(url);
 		driver.manage().window().maximize();

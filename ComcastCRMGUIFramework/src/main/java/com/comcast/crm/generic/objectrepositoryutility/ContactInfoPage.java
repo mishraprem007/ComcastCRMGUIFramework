@@ -7,29 +7,31 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ContactInfoPage {
 
-	WebDriver driver;		
+	WebDriver driver;
+
 	public ContactInfoPage(WebDriver driver) {
-		this.driver=driver;
-	PageFactory.initElements(driver, this);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-	@FindBy(id="dtlview_Last Name")
+
+	@FindBy(id = "dtlview_Last Name")
 	private WebElement lastNameTF;
-	
-	@FindBy(xpath="//span[@class='dvHeaderText']")
+
+	@FindBy(xpath = "//span[@class='dvHeaderText']")
 	private WebElement headerMSG;
-	
-	@FindBy(className="dvHeaderText")
+
+	@FindBy(className = "dvHeaderText")
 	private WebElement contactheaderMSG;
-	
-	@FindBy(xpath="//td[@id='mouseArea_Organization Name']/a")
+
+	@FindBy(xpath = "//td[@id='mouseArea_Organization Name']/a")
 	private WebElement headerOrgName;
-	
-	@FindBy(id="dtlview_Support Start Date")
+
+	@FindBy(id = "dtlview_Support Start Date")
 	private WebElement startdateTF;
-	
-	@FindBy(id="dtlview_Support End Date")
+
+	@FindBy(id = "dtlview_Support End Date")
 	private WebElement endDateTF;
-	
+
 	public WebElement getLastNameTF() {
 		return lastNameTF;
 	}
@@ -37,7 +39,7 @@ public class ContactInfoPage {
 	public WebElement getHeaderMSG() {
 		return headerMSG;
 	}
-	
+
 	public WebElement getContactheaderMSG() {
 		return contactheaderMSG;
 	}
@@ -53,6 +55,5 @@ public class ContactInfoPage {
 	public WebElement getEndDateTF() {
 		return endDateTF;
 	}
-	
-	
+
 }

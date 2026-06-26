@@ -68,7 +68,7 @@ public class WebDriverUtility {
 		driver.switchTo().alert().dismiss();
 	}
 
-	public void selectbyindex(WebElement element, int index) {
+	public void selectbyIndex(WebElement element, int index) {
 		Select obj = new Select(element);
 		obj.selectByIndex(index);
 	}

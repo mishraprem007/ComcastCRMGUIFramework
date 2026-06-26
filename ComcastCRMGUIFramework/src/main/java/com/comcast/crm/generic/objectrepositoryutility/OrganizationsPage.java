@@ -7,24 +7,25 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OrganizationsPage {
 
-	WebDriver driver;		
+	WebDriver driver;
+
 	public OrganizationsPage(WebDriver driver) {
-		this.driver=driver;
-	PageFactory.initElements(driver, this);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(xpath="//img[@title='Create Organization...']")
+
+	@FindBy(xpath = "//img[@title='Create Organization...']")
 	private WebElement createNewOrgBtn;
 
-	@FindBy(name="search_text")
+	@FindBy(name = "search_text")
 	private WebElement searchEdt;
-	
-	@FindBy(name="search_field")
+
+	@FindBy(name = "search_field")
 	private WebElement searchDD;
-	
-	@FindBy(name="submit")
+
+	@FindBy(name = "submit")
 	private WebElement searchBtn;
-	
+
 	public WebElement getCreateNewOrgBtn() {
 		return createNewOrgBtn;
 	}
@@ -40,6 +41,5 @@ public class OrganizationsPage {
 	public WebElement getSearchBtn() {
 		return searchBtn;
 	}
-	
-	
+
 }

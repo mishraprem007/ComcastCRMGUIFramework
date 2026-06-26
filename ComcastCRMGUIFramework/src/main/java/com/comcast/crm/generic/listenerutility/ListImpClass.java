@@ -70,7 +70,7 @@ public class ListImpClass implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String testName = result.getMethod().getMethodName();
-		TakesScreenshot eDriver = (TakesScreenshot) Baseclass.sdriver;
+		TakesScreenshot eDriver = (TakesScreenshot)  UtilityClassObject.getDriver();
 		String filePath = eDriver.getScreenshotAs(OutputType.BASE64);
 		
 		String time=new Date().toString().replace(" ", "_").replace(":", "_");
@@ -80,7 +80,8 @@ public class ListImpClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		
+		System.out.println("====>"+result.getMethod().getMethodName()+">====skipped====");
+		test.log(Status.SKIP, result.getMethod().getMethodName()+"==>skipped<===");	
 	}
 
 	@Override

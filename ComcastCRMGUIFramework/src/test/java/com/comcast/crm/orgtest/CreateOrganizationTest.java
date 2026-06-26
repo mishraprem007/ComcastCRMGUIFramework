@@ -22,8 +22,8 @@ public class CreateOrganizationTest extends Baseclass {
 
 		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file */
-		String orgName = eLib.getDataFromexcel("org", 1, 2) + jLib.getRandomNumber();
-		String shipping = eLib.getDataFromexcel("org", 1, 4);
+		String orgName = eLib.getDataFromExcel("org", 1, 2) + jLib.getRandomNumber();
+		String shipping = eLib.getDataFromExcel("org", 1, 4);
 
 		/* step2: navigate to organization module */
 		UtilityClassObject.getTest().log(Status.INFO, "Navigate to org page");
@@ -59,10 +59,10 @@ public class CreateOrganizationTest extends Baseclass {
 
 		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file */
-		String orgName = eLib.getDataFromexcel("org", 4, 2) + jLib.getRandomNumber();
-		String industry = eLib.getDataFromexcel("org", 4, 3);
-		String shipping = eLib.getDataFromexcel("org", 4, 4);
-		String type = eLib.getDataFromexcel("org", 4, 5);
+		String orgName = eLib.getDataFromExcel("org", 4, 2) + jLib.getRandomNumber();
+		String industry = eLib.getDataFromExcel("org", 4, 3);
+		String shipping = eLib.getDataFromExcel("org", 4, 4);
+		String type = eLib.getDataFromExcel("org", 4, 5);
 
 		UtilityClassObject.getTest().log(Status.INFO, "Navigate to org page");
 		/* step2: navigate to organization module */
@@ -97,9 +97,9 @@ public class CreateOrganizationTest extends Baseclass {
 
 		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file */
-		String orgName = eLib.getDataFromexcel("org", 7, 2) + jLib.getRandomNumber();
-		String phoneNumber = eLib.getDataFromexcel("org", 7, 3);
-		String shipping = eLib.getDataFromexcel("org", 7, 4);
+		String orgName = eLib.getDataFromExcel("org", 7, 2) + jLib.getRandomNumber();
+		String phoneNumber = eLib.getDataFromExcel("org", 7, 3);
+		String shipping = eLib.getDataFromExcel("org", 7, 4);
 
 		UtilityClassObject.getTest().log(Status.INFO, "Navigate to org page");
 		/* step2: navigate to organization module */
@@ -130,8 +130,8 @@ public class CreateOrganizationTest extends Baseclass {
 
 		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file */
-		String orgName = eLib.getDataFromexcel("org", 10, 2) + jLib.getRandomNumber();
-		String shipping = eLib.getDataFromexcel("org", 10, 4);
+		String orgName = eLib.getDataFromExcel("org", 10, 2) + jLib.getRandomNumber();
+		String shipping = eLib.getDataFromExcel("org", 10, 4);
 
 		UtilityClassObject.getTest().log(Status.INFO, "Navigate to org page");
 		/* step2: navigate to organization module */

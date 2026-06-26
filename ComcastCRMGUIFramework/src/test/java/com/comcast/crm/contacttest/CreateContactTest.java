@@ -26,7 +26,7 @@ public class CreateContactTest extends Baseclass {
 		
 		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file*/
-		String lastName = eLib.getDataFromexcel("contact", 1, 2) + jLib.getRandomNumber();
+		String lastName = eLib.getDataFromExcel("contact", 1, 2) + jLib.getRandomNumber();
 
 		/* step2: navigate to contact module*/
 		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
@@ -62,9 +62,9 @@ public class CreateContactTest extends Baseclass {
 
 		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file*/
-		String orgName = eLib.getDataFromexcel("contact", 7, 2) + jLib.getRandomNumber();
-		String shipping = eLib.getDataFromexcel("contact", 7, 3);
-		String lastName = eLib.getDataFromexcel("contact", 7, 4) + jLib.getRandomNumber();
+		String orgName = eLib.getDataFromExcel("contact", 7, 2) + jLib.getRandomNumber();
+		String shipping = eLib.getDataFromExcel("contact", 7, 3);
+		String lastName = eLib.getDataFromExcel("contact", 7, 4) + jLib.getRandomNumber();
 
 		/* step2: navigate to organization module*/
 		UtilityClassObject.getTest().log(Status.INFO, "Navigate to org page");
@@ -134,7 +134,7 @@ public class CreateContactTest extends Baseclass {
 
 		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		/* Read test script data from excel file*/
-		String lastName = eLib.getDataFromexcel("contact", 4, 2) + jLib.getRandomNumber();
+		String lastName = eLib.getDataFromExcel("contact", 4, 2) + jLib.getRandomNumber();
 
 		/* step2: navigate to contact module*/
 		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
@@ -147,7 +147,7 @@ public class CreateContactTest extends Baseclass {
 		cnp.getcreateNewcontactBtn().click();
 
 		String startDate = jLib.getSystemDateYYYYDDMM();
-		String endDate = jLib.getRequiredDateYYYYDDMM(30);
+		String endDate = jLib.getRequiredDateYYYYMMDD(30);
 
 		/* step4: enter all the details & create new contact*/
 		UtilityClassObject.getTest().log(Status.INFO,  "Create contact page with supportdate");
